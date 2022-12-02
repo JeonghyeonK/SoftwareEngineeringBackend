@@ -3,6 +3,7 @@ package mon.sinamon.api;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 import mon.sinamon.domain.Address;
 import mon.sinamon.domain.Member;
 import mon.sinamon.service.MemberService;
@@ -22,6 +23,7 @@ public class MemberApiController {
     // 회원가입
     @PostMapping("/api/members/create")
     public CreateMemberResponse createMember(@RequestBody @Valid CreateMemberRequest request) {
+
 
         // request에서 받은 회원정보를 member 객체로 생성
         Member member = new Member();
